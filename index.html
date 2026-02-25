@@ -3,70 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Perfect Tailor</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
-</head>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <h2>Perfect Tailor</h2>
-  <button onclick="scrollToBooking()">Book Now</button>
-</nav>
+  <header>
+    <div class="overlay">
+      <h1>Perfect Tailor</h1>
+      <p>Luxury Tailoring at Your Doorstep</p>
+      <button onclick="scrollToBooking()">Book Appointment</button>
+    </div>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Perfect Fit. Delivered.</h1>
-    <p>Luxury tailoring at your doorstep</p>
-    <button onclick="scrollToBooking()">Book Appointment</button>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services">
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1520975922284-5f3b04bbd05b">
-    <h3>Custom Stitching</h3>
-  </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
-    <h3>Premium Fabrics</h3>
-  </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0">
-    <h3>Home Measurement</h3>
-  </div>
-</section>
-
-<!-- BOOKING SECTION -->
-<section class="form-section" id="booking">
-  <div class="form-box">
+  <section id="booking">
     <h2>Book a Home Visit</h2>
-    <p class="subtitle">We come to your home and take precise measurements</p>
 
-    <form id="bookingForm">
-      <input type="text" placeholder="Full Name" required>
-      <input type="text" placeholder="Address" required>
-      <input type="date" required>
-      <input type="time" required>
+    <form onsubmit="sendToWhatsApp(event)">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <input type="text" id="address" placeholder="Address" required>
+      <input type="date" id="date" required>
+      <input type="time" id="time" required>
+
       <button type="submit">Confirm Booking</button>
     </form>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <h3>Perfect Tailor</h3>
-  <p>Premium tailoring at your doorstep</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
