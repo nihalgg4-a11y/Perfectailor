@@ -5,15 +5,15 @@ body {
   color: white;
 }
 
-/* HERO SECTION */
+/* HERO */
 header {
   height: 100vh;
-  background: url('tailor.jpg') center/cover no-repeat;
-  position: relative;
+  background: url('https://images.unsplash.com/photo-1520975922284-9d1b9c1cdbf2') center/cover no-repeat;
+  background-attachment: fixed;
 }
 
 .overlay {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.75);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ header {
 /* TEXT */
 header h1 {
   font-size: 60px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 header p {
@@ -47,10 +47,40 @@ button:hover {
   color: black;
 }
 
-/* BOOKING SECTION */
-section {
+/* GALLERY */
+.gallery {
   padding: 60px 20px;
   text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 30px;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.images img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.images img:hover {
+  transform: scale(1.05);
+}
+
+/* BOOKING */
+#booking {
+  padding: 60px 20px;
+  text-align: center;
+  background: #111;
 }
 
 form {
