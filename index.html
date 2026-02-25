@@ -4,73 +4,61 @@
   <meta charset="UTF-8">
   <title>Perfect Tailor</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- NAVBAR -->
+<nav>
+  <h2>Perfect Tailor</h2>
+  <button onclick="scrollToBooking()">Book Now</button>
+</nav>
+
+<!-- HERO -->
 <section class="hero">
-  <div class="overlay">
-    <h1>Perfect Tailor</h1>
-    <p>Custom Fit. Delivered to Your Doorstep.</p>
-    <button onclick="scrollToBooking()">Book Now</button>
+  <div class="hero-content">
+    <h1>Perfect Fit. Delivered.</h1>
+    <p>Luxury tailoring at your doorstep</p>
+    <button onclick="scrollToBooking()">Book Appointment</button>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section class="services">
-  <h2>Our Services</h2>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1520975922284-5f3b04bbd05b">
+    <h3>Custom Stitching</h3>
+  </div>
 
-  <div class="cards">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0">
-      <h3>Home Measurement</h3>
-      <p>We visit your home and take precise measurements.</p>
-    </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+    <h3>Premium Fabrics</h3>
+  </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1520975922284-5f3b04bbd05b">
-      <h3>Custom Stitching</h3>
-      <p>Get perfectly tailored clothes made just for you.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
-      <h3>Future Shopping</h3>
-      <p>Use your saved measurements to shop easily.</p>
-    </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0">
+    <h3>Home Measurement</h3>
   </div>
 </section>
 
-<!-- BOOKING -->
-<section class="booking" id="booking">
-  <h2>Book a Home Visit</h2>
+<!-- BOOKING SECTION -->
+<section class="form-section" id="booking">
+  <div class="form-box">
+    <h2>Book a Home Visit</h2>
+    <p class="subtitle">We come to your home and take precise measurements</p>
 
-  <form id="bookingForm">
-    <input type="text" placeholder="Full Name" required>
-    <input type="text" placeholder="Address" required>
-    <input type="date" required>
-    <input type="time" required>
-    <button type="submit">Confirm Booking</button>
-  </form>
-</section>
-
-<!-- MEASUREMENTS -->
-<section class="measurements">
-  <h2>Your Measurements</h2>
-
-  <input type="text" id="chest" placeholder="Chest">
-  <input type="text" id="waist" placeholder="Waist">
-  <input type="text" id="shoulder" placeholder="Shoulder">
-  <input type="text" id="length" placeholder="Length">
-
-  <button onclick="saveMeasurements()">Save Measurements</button>
-
-  <p id="savedData"></p>
+    <form id="bookingForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="text" placeholder="Address" required>
+      <input type="date" required>
+      <input type="time" required>
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
 </section>
 
 <!-- FOOTER -->
