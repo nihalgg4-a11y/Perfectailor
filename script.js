@@ -13,7 +13,7 @@ function sendToWhatsApp(event) {
   let date = document.getElementById("date").value;
   let time = document.getElementById("time").value;
 
-  let message = `New Booking - Perfect Tailor
+  let message = `🧵 New Booking - Perfect Tailor
 Name: ${name}
 Phone: ${phone}
 Address: ${address}
