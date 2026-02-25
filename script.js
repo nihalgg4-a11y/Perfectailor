@@ -4,26 +4,25 @@ function scrollToBooking() {
   });
 }
 
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+function sendToWhatsApp(event) {
+  event.preventDefault();
 
-  const name = document.querySelector('input[placeholder="Full Name"]').value;
-  const address = document.querySelector('input[placeholder="Address"]').value;
-  const date = document.querySelector('input[type="date"]').value;
-  const time = document.querySelector('input[type="time"]').value;
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let address = document.getElementById("address").value;
+  let date = document.getElementById("date").value;
+  let time = document.getElementById("time").value;
 
-  const message =
-    `🧵 *New Booking - Perfect Tailor* %0A%0A` +
-    `👤 Name: ${name} %0A` +
-    `📍 Address: ${address} %0A` +
-    `📅 Date: ${date} %0A` +
-    `⏰ Time: ${time}`;
+  let message = `🧵 New Booking - Perfect Tailor
+Name: ${name}
+Phone: ${phone}
+Address: ${address}
+Date: ${date}
+Time: ${time}`;
 
-  const phoneNumber = "919019311084"; //
+  let whatsappNumber = "919019311084";
 
-  const url = `https://wa.me/${phoneNumber}?text=${message}`;
+  let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   window.open(url, "_blank");
-
-  alert("Redirecting to WhatsApp to confirm your booking...");
-});
+}
