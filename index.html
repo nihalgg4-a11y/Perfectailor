@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tailor at Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Tailor at Your Doorstep</h1>
+  <p>Perfect Fit. Measured at Home.</p>
+</header>
+
+<section class="booking">
+  <h2>Book a Measurement Slot</h2>
+  <form id="bookingForm">
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Address" required>
+    <input type="date" required>
+    <input type="time" required>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<section class="dashboard">
+  <h2>Your Measurements</h2>
+  <input type="text" id="chest" placeholder="Chest (inches)">
+  <input type="text" id="waist" placeholder="Waist (inches)">
+  <input type="text" id="length" placeholder="Length (inches)">
+  <button onclick="saveMeasurements()">Save Measurements</button>
+
+  <h3>Saved Data:</h3>
+  <p id="savedData"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
